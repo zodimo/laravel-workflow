@@ -13,10 +13,17 @@
         "mikestead.dotenv",
         "christian-kohler.path-intellisense",
         "esbenp.prettier-vscode",
-        "CoenraadS.bracket-pair-colorizer"
+        "CoenraadS.bracket-pair-colorizer",
+        "xdebug.php-debug"
 	],
-    "settings": {
-        "#terminal.integrated.shell.linux": "/bin/bash"
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "#terminal.integrated.shell.linux": "/bin/bash",
+                "php.debug.executablePath": "/usr/bin/php"
+            }
+        }
     },
+
 	"postCreateCommand": "cp .env.example .env && composer install",
 }

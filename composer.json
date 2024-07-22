@@ -1,50 +1,52 @@
 {
-    "name": "laravel-workflow/laravel-workflow",
-    "description": "Durable workflow engine that allows users to write long running persistent distributed workflows (orchestrations) in PHP powered by Laravel queues.",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Workflow\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "rector": "vendor/bin/rector",
-        "ecs": "vendor/bin/ecs check --fix",
-        "stan": "vendor/bin/phpstan analyse src tests",
-        "feature": "phpunit --testdox --testsuite feature",
-        "unit": "phpunit --testdox --testsuite unit",
-        "test": "phpunit --testdox"
-    },
-    "authors": [
-        {
-            "name": "Richard McDaniel",
-            "email": "richard.lee.mcdaniel@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^8.0.2",
-        "laravel/framework": "^9.0|^10.0|^11.0",
-        "spatie/laravel-model-states": "^2.1",
-        "react/promise": "^2.9|^3.0"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^7.1",
-        "phpstan/phpstan": "^1.9",
-        "rector/rector": "^0.15.1",
-        "scrutinizer/ocular": "dev-master",
-        "symplify/easy-coding-standard": "^11.1"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Workflow\\Providers\\WorkflowServiceProvider"
-            ]
-        }
+  "name": "laravel-workflow/laravel-workflow",
+  "description": "Durable workflow engine that allows users to write long running persistent distributed workflows (orchestrations) in PHP powered by Laravel queues.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Workflow\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "rector": "vendor/bin/rector",
+    "ecs": "vendor/bin/ecs check --fix",
+    "stan": "vendor/bin/phpstan analyse src tests",
+    "feature": "phpunit --testdox --testsuite feature",
+    "unit": "phpunit --testdox --testsuite unit",
+    "debug-unit": "php -dxdebug.start_with_request=yes ./vendor/bin/phpunit --testdox --testsuite unit",
+    "test": "phpunit --testdox",
+    "debug-test": "php -dxdebug.start_with_request=yes ./vendor/bin/phpunit --testdox"
+  },
+  "authors": [
+    {
+      "name": "Richard McDaniel",
+      "email": "richard.lee.mcdaniel@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0.2",
+    "laravel/framework": "^9.0|^10.0|^11.0",
+    "spatie/laravel-model-states": "^2.1",
+    "react/promise": "^2.9|^3.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.1",
+    "phpstan/phpstan": "^1.9",
+    "rector/rector": "^0.15.1",
+    "scrutinizer/ocular": "dev-master",
+    "symplify/easy-coding-standard": "^11.1"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Workflow\\Providers\\WorkflowServiceProvider"
+      ]
+    }
+  }
 }

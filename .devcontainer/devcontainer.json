@@ -14,7 +14,7 @@
         "christian-kohler.path-intellisense",
         "esbenp.prettier-vscode",
         "CoenraadS.bracket-pair-colorizer",
-        "xdebug.php-debug"
+        "xdebug.php-pack"
 	],
     "customizations": {
         "vscode": {
